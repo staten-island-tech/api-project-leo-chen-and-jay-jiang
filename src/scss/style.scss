@@ -13,3 +13,20 @@ body {
 body {
   background-color: blue;
 }
+
+.poke-name {
+  text-transform: capitalize;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.poke-grid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 3rem auto;
+  padding: 3rem auto;
+  width: 60vw;
+}
