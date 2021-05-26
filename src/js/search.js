@@ -11,6 +11,7 @@ const listen = function () {
         );
         const data = await response.json();
         //const datarray = Object.entries(data);
+        console.log(data);
         const datarray = [data];
         datarray.forEach((pokemon) => {
           DOMSelectors.grid.insertAdjacentHTML(
@@ -18,9 +19,6 @@ const listen = function () {
             `<div class="poke-card">
                   <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png" alt="">
                   <h1 class="poke-name">${data.species.name}</h1>
-                  <h1 class="poke-height">Height: 0.${data.height} Meters</h1>
-                  <h1 class="poke-type">Type: ${data.types[0].type.name}</h1>
-                  <h1 class="poke-weight">Weight: ${data.weight/10} kg</h1>
                 </div>`
           );
         });
