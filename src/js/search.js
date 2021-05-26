@@ -24,7 +24,7 @@ const listen = function () {
         });
       } catch (error) {
         console.log(error);
-        alert("Hey something went wrong");
+        alert("No such pokemon was found.");
       }
     };
     searchQuery();
