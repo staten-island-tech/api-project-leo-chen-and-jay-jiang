@@ -1,5 +1,4 @@
 @use "_search.scss";
-
 $font-main: "Asap", sans-serif;
 $font-second: "Josefin Slab", serif;
 html,
@@ -31,4 +30,5 @@ body {
   margin: 3rem auto;
   padding: 3rem auto;
   width: 60vw;
+  border: 5rem black;
 }
