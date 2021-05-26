@@ -7,17 +7,18 @@ const listen = function () {
     const searchQuery = async function () {
       try {
         const response = await fetch(
-          `https://pokeapi.co/api/v2//pokemon/${searchParams}`
+          `https://pokeapi.co/api/v2/pokemon/${searchParams}`
         );
         const data = await response.json();
-        data.forEach((pokemon) => {
+        //const datarray = Object.entries(data);
+        console.log(data);
+        const datarray = [data];
+        datarray.forEach((pokemon) => {
           DOMSelectors.grid.insertAdjacentHTML(
             "beforeend",
             `<div class="poke-card">
-                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-                    data.results.indexOf(pokemon) + 1
-                  }.png" alt="">
-                  <h1 class="poke-name">${pokemon.species.name}</h1>
+                  <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png" alt="">
+                  <h1 class="poke-name">${data.species.name}</h1>
                 </div>`
           );
         });
