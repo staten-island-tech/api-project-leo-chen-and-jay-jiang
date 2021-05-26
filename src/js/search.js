@@ -31,14 +31,3 @@ const listen = function () {
   });
 };
 listen();
-
-
-const pokeAbility = async function () {
-  try {
-    const response2 = await fetch(
-      `https://pokeapi.co/api/v2/ability/${searchParams}/`
-    );
-    const data2 = await response2.json();
-    //const datarray = Object.entries(data);
-  }
-}
